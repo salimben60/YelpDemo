@@ -2,7 +2,7 @@
 <div class="jumbotron" style="text-align:center">
   <h2>Welcome to my Yelp Demo page in Rails</h2>
   <h3>ITU Spring Class.<br>
-    Professor Bharaiv Mehtra</h3>
+    Professor Bhairav Mehta</h3>
 </div>
 </div>
 <div class="col-sm-5 col-sm-offset-1">
@@ -39,8 +39,8 @@
         
         
         <% if user_signed_in? && current_user.admin? %>
-          <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></td>
-          <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+          <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-primary" %></td>
+          <td><%= link_to 'Delete', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
         <% end %>
       </tr>
     <% end %>
@@ -50,8 +50,9 @@
 <br>
 
 <% if user_signed_in? && current_user.admin? %>
-  <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-link" %>
+  <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-success btn-lg btn-block" %>
+  
 <% end %>
 
 
-<%= image_tag "http://itu.edu/media/logo/crest_itu_2013.png",  :style => "display: block;margin-left: auto;margin-right: auto;"  %>
+<%= image_tag "http://itu.edu/media/logo/crest_itu_2013.png",  :class => "imgButtom"  %>
