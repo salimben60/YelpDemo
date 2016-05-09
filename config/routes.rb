@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'picture1/index'
 
-  get 'static_pages/Pictures'
 
   devise_for :users
   resources :restaurants do
@@ -15,7 +13,6 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
-    get 'pages/pictures'
 
   root 'restaurants#index'
 
